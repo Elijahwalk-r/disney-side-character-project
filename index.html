@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elijah's API Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <img class="disney-logo" src="./assets/og_disney_4a3148aa.webp" alt="A Picture of Disney's logo">
+        </div>
+        <div class="parent">
+                    <!-- Nav begins here -->
+            <nav>
+                <ul>
+                    <li> <a href="#home">Home</a> </li>
+                    <li> <a href="#warrior">Underdogs</a></li>
+                    <li> <a href="#info">Info</a></li>                
+                </ul>
+            </nav> 
+                    <!-- nav ends here -->
+                    <!-- header begins here -->
+            <header>
+                <a id="home"></a>
+                <h1><span class="fire"></span>Disney's Supporting Characters<span class="fire"></span></h1>
+            </header> 
+                    <!-- header ends here -->
+            <div class="flex-child">
+                <p>Chances are you've watched a Disney movie at some point in time in your life. If not, then you are missing out! It was a defining moment in a lot of childhoods for over 20+ years now! It's brought smiles, frowns, tears and laughter! 
+                       
+                    <span class="mickey-mouse-down"><img class="mickey-down"src="./assets/peeking down mm.jpg" alt="A Picture of Mickey Mouse Peeking down from behind a wall"></span>
+                    
+                </p>
+
+                <p> This page serves as a reminder for all the underdogs and forgotten characters. It serves as a place to recognize many side characters and supporting roles within the Disney universe. These characters have been forgotten but have been pivotal in many of the Disney films. Below is a list of the characters to help refresh your memory. Take a look at the list of characters from the dropdown, select a name, and click a button to display the image of this long and forgotten character!</p> 
+            </div>
+        </div>
+
+        <main>
+            <div class="monster-flex">
+                <img class="monsters-inc"src="./assets/monsters.jpg" alt="A Picture of James P. Sullivan and Mike Wazowski from the Disney Movie, Monsters Inc.">
+            </div>
+            <h2> <a id="warrior"></a> Choose Your Side Character!</h2>
+
+            <div class="select-flex">
+
+                <select name="heros" id="dropdown"></select> 
+
+                <button type="submit" id="click-here">Click Me</button>
+            </div>
+                <div class="super-hero">
+            <!-- Dynamic Content goes here -->
+                </div>
+            <img class="mickey-mouse" src="./assets/peeking left mm.webp" alt="A Picture of Mickey Mouse Peeking Left around a wall">
+        </main>
+            
+    </div>
+
+    <!-- footer begins here, referencing my API & Juno link -->
+    <div>
+
+        
+        <footer>
+            <p>Data Courtesy of <a href="https://disneyapi.dev/docs" target="_blank" rel="noopener">Disney API</a></p>
+            <a href="https://junocollege.com/" target="_blank" rel="noopener">Created at Juno College of Technology</a>
+        </footer>
+        <a id="info"></a>
+    </div>
+    <!-- footer ends here -->
+
+    <!-- jQuery & JS -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>
