@@ -11,7 +11,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* Base Styling */
 .wrapper{
     max-width: 1200px;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -24,31 +24,16 @@ body{
     font-size: 1.8rem;
     margin: 0px;
     padding: 0px;
-    background-image: url(./assets/Blue-Sky-Clouds-Wallpaper-Mural_2a23bea6-7559-405b-92aa-d338d467d0da.jpg);
-    background-repeat: round;
-    background-size: cover;
+    background-color: rgb(23, 23, 38);
 } 
 
-.parent{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
-
-.flex-child{
+.flex-parent{
     display: flex;
     justify-content: space-evenly;
 }
 
-header{
-    align-self: center;
-}
-
-.flex-child p,
+.flex-parent p,
 li,
-header,
 h2,
 footer{
     border: 4px groove  #09477d;
@@ -64,7 +49,7 @@ button{
     padding: 10px;
 }
 
-.flex-child p{
+.flex-parent p{
     line-height: 3rem;
     letter-spacing: 0.5px;
     margin: 40px;
@@ -72,9 +57,12 @@ button{
     width: calc((100% / 2) - 40px);
 }
 
+.disney-logo-container{
+    display: inline;
+}
 .disney-logo{
-    height: auto;
-    width: 25%;
+    height: 40%;
+    width: 10%;
     border: 1px solid #00008b ;
     border-radius: 50%;
     margin-top: 20px;
@@ -90,24 +78,45 @@ button{
     border: 1px solid #00008b ;
     border-radius: 50%;
 }
+
 /* Nav Styling */
-li,
-li a{
+nav{
+    text-align: center;
+}
+li{
     display: inline-block;
     list-style-type:none;
     letter-spacing: 1px;
     font-size: 2rem;
-    text-decoration-line: none;
-    margin: 0 5px;
+    margin: 0 20px;
     color: #000;
 }
 
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
 /* Header Styling */
-header{
-    padding: 50px;
+header {
+    height: 35vh;
     margin: 30px;
     font-size: 2.3rem;
 }
+
+.header-parent {
+    background-image: url(./assets/Blue-Sky-Clouds-Wallpaper-Mural_2a23bea6-7559-405b-92aa-d338d467d0da.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-radius: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .fire::before,
 .fire::after {
     content: "🌀";
@@ -180,12 +189,11 @@ h2{
     }
 
 /* Footer Styling */
-footer{
+.footer-container{
     font-family:'Times New Roman', Times, serif;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10px;
     font-size: 2rem;
 }
 
@@ -195,27 +203,50 @@ footer{
     border: 1px solid #00008b;
     border-radius: 50%;
 }
-footer a{
+
+ .footer-anchor{
     color: black;
+}
+
+.footer-anchor:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
 
 /* Media Queries Styling */
-@media (max-width: 1000px ) {
-    .flex-child{
+@media (max-width: 1222px ) {
+    header{
+        font-size: 2rem;
+    }
+
+    h1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-parent{
+        padding: 30px;
+    }
+    .flex-parent{
         display: flex;
         flex-direction: column;
             }
-    .flex-child p{
+    .flex-parent p{
         width: 90%;
         margin: auto;
             }
-    .flex-child p{
+    .flex-parent p{
         margin-bottom: 20px;
             }
              }
 
 @media (max-width: 768px) {
+    .disney-logo{
+        width: 20%;
+    }
     .mickey-mouse,
     .monsters-inc{
         visibility: hidden;
@@ -230,9 +261,6 @@ footer a{
 }
 
 @media (max-width: 500px) {
-    .wrapper{
-        width: 100%
-    }
     .mickey-mouse,
     .monsters-inc,
     .mickey-mouse-down{
@@ -243,11 +271,15 @@ footer a{
         flex-direction: column;
         padding: 0px;
     }
-    .flex-child{
+
+    li{
+        margin-bottom: 10px;
+    }
+    .flex-parent{
         display: flex;
         flex-direction: column;
     }
-    .flex-child p{
+    .flex-parent p{
         width: 90%;
         margin: auto;
     }
