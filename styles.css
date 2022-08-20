@@ -272,6 +272,10 @@ footer p{
         align-items: center;
   }
 
+  footer{
+    height: 15vh;
+  }
+
   footer p{
     margin-bottom: 10px;
   }
